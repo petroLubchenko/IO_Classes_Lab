@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D476748-A9DD-419B-82AD-7A82C6DF901C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IO_Classes_Lab</RootNamespace>
+    <AssemblyName>IO_Classes_Lab</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Cargo.cs" />
+    <Compile Include="Classes\Passanger.cs" />
+    <Compile Include="Forms\AddLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddLicense.Designer.cs">
+      <DependentUpon>AddLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddRouteTranspAggr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddRouteTranspAggr.Designer.cs">
+      <DependentUpon>AddRouteTranspAggr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Base.cs" />
+    <Compile Include="Classes\Driver.cs" />
+    <Compile Include="Forms\FibonacciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FibonacciForm.Designer.cs">
+      <DependentUpon>FibonacciForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IHuman.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Route.cs" />
+    <Compile Include="Classes\RouteTransportationAgreement.cs" />
+    <Compile Include="Forms\ShowDriverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowDriverForm.Designer.cs">
+      <DependentUpon>ShowDriverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowRouteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowRouteForm.Designer.cs">
+      <DependentUpon>ShowRouteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowTransportationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowTransportationForm.Designer.cs">
+      <DependentUpon>ShowTransportationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowTransportType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowTransportType.Designer.cs">
+      <DependentUpon>ShowTransportType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Transportation.cs" />
+    <Compile Include="Classes\TransportType.cs" />
+    <EmbeddedResource Include="Forms\AddLicense.resx">
+      <DependentUpon>AddLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddRouteTranspAggr.resx">
+      <DependentUpon>AddRouteTranspAggr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FibonacciForm.resx">
+      <DependentUpon>FibonacciForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\ShowDriverForm.resx">
+      <DependentUpon>ShowDriverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowRouteForm.resx">
+      <DependentUpon>ShowRouteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowTransportationForm.resx">
+      <DependentUpon>ShowTransportationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowTransportType.resx">
+      <DependentUpon>ShowTransportType.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Driver.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

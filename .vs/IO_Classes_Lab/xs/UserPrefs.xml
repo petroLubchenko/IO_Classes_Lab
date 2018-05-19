@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{9D476748-A9DD-419B-82AD-7A82C6DF901C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IO_Classes_Lab/ShowDriverForm.cs">
+    <Files>
+      <File FileName="IO_Classes_Lab/ShowDriverForm.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.IO__Classes__Lab PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
