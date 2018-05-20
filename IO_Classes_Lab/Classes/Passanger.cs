@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IO_Classes_Lab.Classes
 {
-    class Passanger :Cargo, IHuman
+    class Passanger : Cargo, IHuman
     {
         public string Firstname { get; private set; }
         public string Secondname { get; private set; }

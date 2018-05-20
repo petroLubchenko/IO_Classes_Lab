@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IO_Classes_Lab.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IO_Classes_Lab
 {
-    public class Driver : Base
+    public class Driver : Base, IHuman
     {
         private static String LastOperation
         {
@@ -20,16 +21,16 @@ namespace IO_Classes_Lab
         public static List<Driver> Drivers = new List<Driver>();
         private Route route;
 
-        public string FirstName { get; private set; }
-        public string SecondName { get; private set; }
+        public string Firstname { get; private set; }
+        public string Secondname { get; private set; }
         public string Name
         {
             get
             {
-                return String.Format("{0} {1}", FirstName, SecondName);
+                return String.Format("{0} {1}", Firstname, Secondname);
             }
         }
-        private readonly DateTime Birthday;
+        public readonly DateTime Birthday;
         public Route Route {
             get
             {
@@ -71,16 +72,16 @@ namespace IO_Classes_Lab
 
         public Driver(string firstname, string secondname, DateTime birthday = new DateTime())
         {
-            FirstName = firstname;
-            SecondName = secondname;
+            Firstname = firstname;
+            Secondname = secondname;
             Birthday = birthday;
             Drivers.Add(this);
             LastOperation = this.ToString() + " : Initialising object";
         }
         public Driver(DateTime birthday = new DateTime())
         {
-            FirstName = "";
-            SecondName = "";
+            Firstname = "";
+            Secondname = "";
             Drivers.Add(this);
             LastOperation = this.ToString() + " : Initialising object";
         }
@@ -88,8 +89,8 @@ namespace IO_Classes_Lab
         {
             if (firstnames.Length < 1)
                 throw new ArgumentException("Empty first name");
-            FirstName = firstnames[0];
-            SecondName = secondname;
+            Firstname = firstnames[0];
+            Secondname = secondname;
             Drivers.Add(this);
             for (int i = 1; i < firstnames.Length - 1; i++)
                 new Driver(firstnames[i], secondname);
@@ -99,8 +100,8 @@ namespace IO_Classes_Lab
         {
             if (secondnames.Length < 1)
                 throw new ArgumentException("Empty first name");
-            FirstName = firstname;
-            SecondName = secondnames[0];
+            Firstname = firstname;
+            Secondname = secondnames[0];
             Drivers.Add(this);
             for (int i = 1; i < secondnames.Length - 1; i++)
                 new Driver(firstname, secondnames[i]);
@@ -111,17 +112,25 @@ namespace IO_Classes_Lab
         {
             License.Delete(this);
             Route = null;
-            FirstName = null;
-            SecondName = null;
+            Firstname = null;
+            Secondname = null;
             LastOperation = this.ToString() + " : Destructing object";
         }
 
         public void ChangeName(string firstname, string secondname)
         {
             LastOperation = this.ToString() + " : Changing names of driver";
-            FirstName = firstname;
-            SecondName = secondname;
+            Firstname = firstname;
+            Secondname = secondname;
             LastOperation = this.ToString() + " : Changed names of driver";
+        }
+        public void ChangeName(string firstname)
+        {
+            Firstname = firstname;
+        }
+        public void ChangeSecondName(string secondname)
+        {
+            Secondname = secondname;
         }
         public void SetRoute(Route route)
         {
